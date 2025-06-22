@@ -238,6 +238,7 @@ class AdCog(commands.Cog):
         self.bot.add_view(ServiceAdView(0))
 
     @commands.slash_command(name="ad", description="Создать объявление")
+    @commands.has_permissions(administrator=True)
     async def ad(self, inter: disnake.ApplicationCommandInteraction):
         pass
 
